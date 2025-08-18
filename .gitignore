@@ -1,0 +1,33 @@
+﻿# Ignore Jupyter checkpoints
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Jupyter autosave temp files
+*.bak
+*.tmp
+*.swp
+
+# VSCode and IDEs
+.vscode/
+.idea/
+
+# Virtual environments
+.env
+.venv/
+venv/
+ENV/
+
+# System-specific files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Git conflict files
+*.orig
