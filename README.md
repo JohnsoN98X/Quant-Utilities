@@ -16,7 +16,7 @@ A custom cross-validation splitter for time series data with support for an *emb
 - **Use case:** Robust backtesting and leakage-free evaluation for financial ML and other time-dependent problems.
 > 📘 Based on an idea introduced by Marcos López de Prado in *Advances in Financial Machine Learning* (2018).
 
-![Time Series Cross-Validation with Embargo](images/EMBARGO.png)
+![Time Series Cross-Validation with Embargo](Images/EMBARGO.png?raw=true)
 
 ---
 
