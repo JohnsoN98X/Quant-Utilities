@@ -13,7 +13,7 @@ A custom cross-validation splitter for time series data with support for an *emb
 
 - **Embargo support:** Prevents leakage by skipping a configurable embargo window.  
 - **Scikit-learn compatible:** Implements `split` and `get_n_splits`.  
-- **Use case:** Robust backtesting and leakage-free evaluation for financial ML and other time-dependent problems.
+- **Use case:** Robust backtesting and leakage-free evaluation for financial ML and other time-dependent problems.  
 > 📘 Based on an idea introduced by Marcos López de Prado in *Advances in Financial Machine Learning* (2018).
 
 ![Time Series Cross-Validation with Embargo](Images/EMBARGO.png?raw=true)
@@ -28,11 +28,26 @@ This approach avoids the pitfalls of naïve spread calculations and provides a c
 - **Flexible inputs:** Works with both `numpy.ndarray` and `pandas.DataFrame`.  
 - **Supports shorting:** Negative weights allowed; optional automatic normalization.  
 - **Outputs:** Asset returns, cumulative returns, ETF returns, and ETF cumulative returns.  
-- **Use case:** Research in portfolio construction, factor testing, or cointegration strategies.
+- **Use case:** Research in portfolio construction, factor testing, or cointegration strategies.  
 > 📘 Based on an idea introduced by Marcos López de Prado in *Advances in Financial Machine Learning* (2018).
 
+---
+
+### 3. CumSumFilter
+
+An implementation of the **CUSUM filter** for event-based sampling.  
+It detects significant cumulative deviations in log-returns that exceed a threshold, producing an informative subsample of the series.
+
+- **Event-based sampling:** Records events when cumulative positive or negative moves exceed a threshold $h$.  
+- **Flexible inputs:** Works with `numpy.ndarray`, `pandas.Series`, and single-column `pandas.DataFrame`.  
+- **Outputs:**  
+  - `events_index`: integer positions (or timestamps) of detected events  
+  - `filtered_events`: log-returns at the detected events  
+- **Use case:** Reducing noise and focusing only on *informative events* in financial time series.  
+> 📘 Also inspired by Marcos López de Prado’s *Advances in Financial Machine Learning* (2018).
 
 ---
+
 
 ## 📂 Project Structure
 
